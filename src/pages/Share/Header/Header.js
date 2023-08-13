@@ -5,11 +5,13 @@ import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 // icon from heroicon
 import {
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
+  CircleStackIcon,
+  CodeBracketIcon,
   XMarkIcon,
+  DevicePhoneMobileIcon,
+  WindowIcon,
+  CursorArrowRaysIcon,
+  SparklesIcon,
 } from "@heroicons/react/24/outline";
 
 import {
@@ -23,28 +25,40 @@ import { NavLink } from "react-router-dom";
 // service list
 const services = [
   {
-    name: "Team Augmentation",
-    description: "Get a better understanding of your traffic",
+    name: "Mobile App",
+    description: "Crafting Apps for Tomorrow.",
     href: "/services/service-one",
-    icon: ChartPieIcon,
+    icon: DevicePhoneMobileIcon,
   },
   {
-    name: "   Offshore Development",
-    description: "Speak directly to your customers",
+    name: "Backend Development",
+    description: "Empowering Your App's Core.",
+    href: "/services/service-one",
+    icon: CircleStackIcon,
+  },
+  {
+    name: "Frontend Development",
+    description: "Elevating User Experiences.",
+    href: "/services/service-one",
+    icon: CodeBracketIcon,
+  },
+  {
+    name: "UI/UX Design",
+    description: "Designing Experiences, Crafting Delight.",
+    href: "/services/service-one",
+    icon: WindowIcon,
+  },
+  {
+    name: "Websites (end-to-end)",
+    description: "From Concept to Clicks.",
     href: "/services/service-one",
     icon: CursorArrowRaysIcon,
   },
   {
-    name: "   MVP Service",
-    description: "Your customers’ data will be safe and secure",
+    name: "Corporate Identity",
+    description: "Forging Memorable Brands.",
     href: "/services/service-one",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: " End to End Development",
-    description: "Connect with third-party tools",
-    href: "/services/service-one",
-    icon: SquaresPlusIcon,
+    icon: SparklesIcon,
   },
 ];
 const callsToAction = [
@@ -188,7 +202,7 @@ const Header = () => {
               to="/contact"
               className="font-semibold text-base leading-6 text-indigo-600"
             >
-              Get Stated <span aria-hidden="true">&rarr;</span>
+              Contact Us <span aria-hidden="true">&rarr;</span>
             </NavLink>
           </div>
         </nav>
@@ -291,7 +305,7 @@ const Header = () => {
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-indigo-600 hover:bg-gray-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Get Started <span aria-hidden="true">&rarr;</span>
+                    Contact Us <span aria-hidden="true">&rarr;</span>
                   </NavLink>
                 </div>
               </div>

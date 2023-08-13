@@ -2,10 +2,11 @@ import React from "react";
 
 import ourMission from "../../../images/our-mission.png";
 import ourVision from "../../../images/our-vision.png";
+import { NavLink } from "react-router-dom";
 
 const FuturePlan = () => {
   return (
-    <div className="bg-gray-100 py-10 sm:py-20">
+    <div className="bg-gray-100 py-10 sm:py-20 mt-20">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-5xl text-center">
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -30,17 +31,39 @@ const FuturePlan = () => {
                     Our Mission
                   </p>
                   <p className="mt-6 text-base leading-8 text-gray-700">
-                    To xyz, there is no differentiation between customers, co
-                    workers, and the people who run the business. We develop
-                    innovative software to help businesses operate more
-                    efficiently while maintaining the best possible relations
-                    with our customers and coworkers base..
+                    Here at ANJI, you have a dedicated pole position. Each IT
+                    project comes with somewhat unique challenges and is a race
+                    on its own: we make sure you start off in the most
+                    advantageous position possible.
                   </p>
                   <p className="mt-6 text-base leading-8 text-gray-700">
-                    Our services are used by some of the country's largest
-                    organizations. We have a team of experienced professionals
-                    who are passionate about their work and aim to provide our
-                    clients with the best possible service.
+                    ANJI is here to develop and deliver IT systems that provide
+                    users with a seamless experience, with a firm belief that
+                    technology adoption should be a choice driven by enjoyment,
+                    not a burdensome chore.
+                  </p>
+                  <p className="mt-6 text-base leading-8 text-gray-700">
+                    You have an idea from scratch or an ongoing development
+                    project that needs scaling- leave it to us!
+                  </p>
+                  <p className="mt-6 text-base leading-8 text-gray-700">
+                    Specializing in end-to-end development solutions, covering
+                    every stage of the software development lifecycle from
+                    concept to deployment, our comprehensive approach ensures
+                    efficient project management, a smooth integration, and the
+                    delivery of high-quality, fully functional software
+                    solutions.
+                  </p>
+                  <p className="mt-6 text-base leading-8 text-gray-700">
+                    Go{" "}
+                    <NavLink
+                      className="text-indigo-600 font-semibold"
+                      to="/contact"
+                    >
+                      here{" "}
+                    </NavLink>
+                    to send us a quick request and we’ll get back to you with an
+                    overview ASAP.
                   </p>
                 </div>
               </div>
@@ -69,16 +92,8 @@ const FuturePlan = () => {
                     Our Vision
                   </p>
                   <p className="mt-6 text-base leading-8 text-gray-700">
-                    Our company mission is to inspire, engage, and promote a
-                    friendly working space to establish the leading software
-                    development company worldwide.
-                  </p>
-                  <p className="mt-6 text-base leading-8 text-gray-700">
-                    Our main goal is to make the company a prime choice for
-                    high-tech support and other technical needs. Our company is
-                    a software company that provides all sorts of technical
-                    services, from simple bug fixes to complex business
-                    solutions.
+                    Our goal is to become bona fide IT solutions experts who
+                    play a significant role in a fast-evolving environment.
                   </p>
                 </div>
               </div>

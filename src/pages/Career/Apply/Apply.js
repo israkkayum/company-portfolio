@@ -60,20 +60,12 @@ const Apply = ({ scrollRef }) => {
         setMessageActive(true);
       });
 
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phoneNumber: "",
-      position: "",
-      experience: "",
-      address: "",
-      file: null,
-    });
+    event.target.reset();
     event.preventDefault();
   };
 
-  const handleCancleChange = (e) => {
+  // cancel button
+  const handleCancelChange = (e) => {
     setMessageActive(false);
     setIsLoading(false);
 
@@ -105,8 +97,8 @@ const Apply = ({ scrollRef }) => {
           <div
             class={
               success
-                ? "flex items-center justify-center p-4 mb-4 text-sm font-bold text-green-800 rounded-lg bg-green-50 mt-10 -mb-20"
-                : "flex items-center justify-center p-4 mb-4 text-sm font-bold text-red-800 rounded-lg bg-red-50 mt-10 -mb-20"
+                ? "flex items-center justify-center p-4 text-sm font-bold text-green-800 rounded-lg bg-green-50 mt-10 -mb-20"
+                : "flex items-center justify-center p-4 text-sm font-bold text-red-800 rounded-lg bg-red-50 mt-10 -mb-20"
             }
             role="alert"
           >
@@ -270,7 +262,7 @@ const Apply = ({ scrollRef }) => {
             <button
               type="button"
               className="text-sm font-semibold leading-6 text-gray-900"
-              onClick={handleCancleChange}
+              onClick={handleCancelChange}
             >
               Cancel
             </button>

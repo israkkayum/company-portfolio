@@ -44,7 +44,7 @@ const HeaderSection = () => {
               {/* ///////// message ///////// */}
               <div className="lg:max-w-lg">
                 <p className="text-base font-semibold leading-7 text-indigo-600">
-                  Welcome to Software Development 🙌
+                  Welcome to ANJI 🙌
                 </p>
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   Leading Software Development Company
@@ -58,7 +58,7 @@ const HeaderSection = () => {
               {/* //////// Button ////////// */}
               <NavLink to="/contact">
                 <button class="rounded-lg bg-indigo-600 text-lg text-white font-semibold py-5 px-10 my-10">
-                  Get Started
+                  Contact Us
                 </button>
               </NavLink>
             </div>
