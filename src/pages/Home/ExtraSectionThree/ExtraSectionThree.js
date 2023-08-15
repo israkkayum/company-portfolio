@@ -4,7 +4,7 @@ import React from "react";
 import codetyping from "../../../images/Code-typing.png";
 import go from "../../../images/go.png";
 import flutter from "../../../images/flutter.png";
-import aws from "../../../images/aws.svg";
+import aws from "../../../images/aws.png";
 import dotnet from "../../../images/dotnet.png";
 import azure from "../../../images/azure.png";
 import phython from "../../../images/phython.png";
@@ -15,39 +15,39 @@ import vuejs from "../../../images/vuejs.png";
 
 const ExtraSectionThree = () => {
   return (
-    <div className="bg-violet-50 py-10 sm:py-20">
+    <div className="bg-white py-10 sm:py-20">
       <div className="container mx-auto px-4 pt-10">
         {/* /// header /// */}
         <div className="mx-auto max-w-5xl text-center">
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Technology We Used
+            Technologies We Use
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             It has become a prerequisite for companies to develop custom
-            software products to stay competitive. Vivasoft's technical
-            expertise use the most popular technology for development
-            outsourcing software.
+            software products to stay competitive. ANJI's technical expertise
+            use the most popular technology for development outsourcing
+            software.
           </p>
         </div>
         {/* //// code typing //// */}
-        <div class="mt-20 p-6 max-w-xl mx-auto bg-white rounded-xl flex items-center space-x-4">
+        <div class="mt-20 p-6 max-w-xl mx-auto bg-gray-100 rounded-xl flex items-center space-x-4">
           <div class="shrink-0">
             <img class="h-32 w-32" src={codetyping} alt="ChitChat Logo" />
           </div>
           <div>
             <div class="text-xl font-medium text-blue-600">
-              Using The most Update Technology
+              Utilizing the Latest Technology
             </div>
             <p class="text-slate-500">
-              Entrusting the new technology to the most advanced programmers
-              will ensure a more robust and high-performing system.
+              Entrusting cutting-edge technology to our advanced programmers
+              guarantees a robust and high-performing system.
             </p>
           </div>
         </div>
         {/* //// */}
         <div className="mt-16 sm:mt-20 lg:mt-24">
           {/* /// grid -> card /// */}
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-5 md:grid-cols-3 lg:gap-y-8">
+          <dl className="grid max-w-xl grid-cols-2 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-5 md:grid-cols-3 lg:gap-y-8">
             <div class="rounded-lg px-6 py-8 text-center inline-flex items-center justify-center">
               <img src={go} />
             </div>
@@ -57,7 +57,7 @@ const ExtraSectionThree = () => {
             <div class="rounded-lg px-6 py-8 text-center inline-flex items-center justify-center">
               <img src={aws} />
             </div>
-            <div class="rounded-lg px-6 py-8 text-center">
+            <div class="rounded-lg px-6 py-8 text-center inline-flex items-center justify-center">
               <img src={dotnet} />
             </div>
             <div class="rounded-lg px-6 py-8 text-center inline-flex items-center justify-center">

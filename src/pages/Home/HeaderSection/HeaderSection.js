@@ -1,14 +1,14 @@
 import React from "react";
 
 import banner from "../../../images/banner.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // //////story data /////////
-const stats = [
-  { id: 1, name: "Years of experience", value: "6+" },
-  { id: 2, name: "Dedicated Engineers", value: "180+" },
-  { id: 3, name: "Successful Projects", value: "70+" },
-];
+// const stats = [
+//   { id: 1, name: "Years of experience", value: "6+" },
+//   { id: 2, name: "Dedicated Engineers", value: "180+" },
+//   { id: 3, name: "Successful Projects", value: "70+" },
+// ];
 
 const HeaderSection = () => {
   return (
@@ -51,18 +51,18 @@ const HeaderSection = () => {
               {/* ///////// message ///////// */}
               <div className="lg:max-w-lg">
                 <p className="text-base font-semibold leading-7 text-indigo-600">
-                  Offshore Software Development 🙌
+                  Global Software Solutions 🚀
                 </p>
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  We Deploy World Class Agile Product Teams on Demand
+                  Empowering Your Vision with Agile Development Teams
                 </h1>
                 <p className="mt-6 text-xl leading-8 text-gray-700">
-                  Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                  sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                  id at vitae feugiat egestas.
+                  Crafting outstanding digital experiences for your success.
+                  Whether it's web design, mobile apps, or more, we've got you
+                  covered. Let's build your digital future together.
                 </p>
               </div>
-              {/* ////////  Story //////////*/}
+              {/* ////////  Story //////////
               <div className="bg-white py-10 sm:py-10">
                 <div className="mx-auto max-w-7xl">
                   <dl className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-3">
@@ -81,13 +81,13 @@ const HeaderSection = () => {
                     ))}
                   </dl>
                 </div>
-              </div>
+              </div> */}
               {/* //////// Button ////////// */}
-              <NavLink to="/contact">
+              <Link to="/contact" reloadDocument>
                 <button class="rounded-lg bg-indigo-600 text-lg text-white font-semibold py-5 px-10 my-10">
                   Hire Developers
                 </button>
-              </NavLink>
+              </Link>
             </div>
           </div>
 

@@ -92,7 +92,7 @@ const ExtraSectionTwo = () => {
 
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 md:grid-cols-2 lg:gap-y-8">
             {features.map((feature) => (
-              <div class="bg-violet-50 rounded-lg px-6 py-8 text-center">
+              <div class="bg-gray-100 rounded-lg px-6 py-8 text-center">
                 <div className="text-center">
                   <span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
                     <feature.icon

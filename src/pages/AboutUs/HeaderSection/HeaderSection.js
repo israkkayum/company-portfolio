@@ -1,7 +1,7 @@
 import React from "react";
 
 import about from "../../../images/about-us.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const HeaderSection = () => {
   return (
@@ -56,11 +56,11 @@ const HeaderSection = () => {
                 </p>
               </div>
               {/* //////// Button ////////// */}
-              <NavLink to="/contact">
+              <Link to="/contact" reloadDocument>
                 <button class="rounded-lg bg-indigo-600 text-lg text-white font-semibold py-5 px-10 my-10">
                   Contact Us
                 </button>
-              </NavLink>
+              </Link>
             </div>
           </div>
 

@@ -48,19 +48,23 @@ const Apply = ({ scrollRef }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setSuccess("true");
+        if (data.success) {
+          setSuccess(true);
+        } else {
+          setSuccess(false);
+        }
+        // console.log(data);
         setIsLoading(false);
         setMessageActive(true);
       })
       .catch((error) => {
-        console.error(error);
-        setSuccess("false");
+        // console.error(error);
+        setSuccess(false);
         setIsLoading(false);
         setMessageActive(true);
       });
 
-    event.target.reset();
+    // event.target.reset();
     event.preventDefault();
   };
 
@@ -97,8 +101,8 @@ const Apply = ({ scrollRef }) => {
           <div
             class={
               success
-                ? "flex items-center justify-center p-4 text-sm font-bold text-green-800 rounded-lg bg-green-50 mt-10 -mb-20"
-                : "flex items-center justify-center p-4 text-sm font-bold text-red-800 rounded-lg bg-red-50 mt-10 -mb-20"
+                ? "flex items-center justify-center p-4 text-sm font-bold text-green-800 rounded-lg bg-green-50 mt-10 -mb-8 lg:-mb-20 md:-mb-10"
+                : "flex items-center justify-center p-4 text-sm font-bold text-red-800 rounded-lg bg-red-50 mt-10 -mb-8 lg:-mb-20 md:-mb-10"
             }
             role="alert"
           >
@@ -113,9 +117,9 @@ const Apply = ({ scrollRef }) => {
             </svg>
             <span class="sr-only">Info</span>
             {success ? (
-              <div>Your Resume Successful Submitted !!</div>
+              <div> Your resume has been successfully submitted! </div>
             ) : (
-              <div>Sorry! Your Resume Submission Failure !!</div>
+              <div>Your submission failed, please try again</div>
             )}
           </div>
         )}
@@ -138,7 +142,7 @@ const Apply = ({ scrollRef }) => {
                   type="text"
                   name="firstName"
                   class="mt-1 mb-5 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                  placeholder="Israk"
+                  // placeholder="Israk"
                   value={formData.firstName}
                   onChange={handleInputChange}
                   required
@@ -153,7 +157,7 @@ const Apply = ({ scrollRef }) => {
                   type="tel"
                   name="phoneNumber"
                   class="mt-1 mb-5 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                  placeholder="0199xxxxxx"
+                  // placeholder="0199xxxxxx"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
@@ -174,9 +178,13 @@ const Apply = ({ scrollRef }) => {
                 onChange={handleInputChange}
                 required
               >
-                <option>Senior SQA Engineer</option>
-                <option>Senior .NET Developer</option>
-                <option>Senior Java Developer</option>
+                <option>Java Developer</option>
+                <option>Javascript Developer</option>
+                <option>DevOps</option>
+                <option>UI/UX Designer</option>
+                <option>Backend Developer</option>
+                <option>Full Stack Developer</option>
+                <option>Front End Developer</option>
               </select>
 
               <label class="block">
@@ -187,7 +195,7 @@ const Apply = ({ scrollRef }) => {
                   type="text"
                   name="address"
                   class="mt-1 mb-5 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                  placeholder="Chittagong,....."
+                  // placeholder="Chittagong,....."
                   value={formData.address}
                   onChange={handleInputChange}
                   required
@@ -204,7 +212,7 @@ const Apply = ({ scrollRef }) => {
                   type="text"
                   name="lastName"
                   class="mt-1 mb-5 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                  placeholder="Kayum"
+                  // placeholder="Kayum"
                   value={formData.lastName}
                   onChange={handleInputChange}
                   required
@@ -218,7 +226,7 @@ const Apply = ({ scrollRef }) => {
                   type="email"
                   name="email"
                   class="mt-1 mb-5 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                  placeholder="israk.kayum@gmail.com"
+                  // placeholder="israk.kayum@gmail.com"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -238,8 +246,11 @@ const Apply = ({ scrollRef }) => {
                 onChange={handleInputChange}
                 required
               >
+                <option>1 years</option>
+                <option>2 years</option>
                 <option>3 years</option>
                 <option>4 years</option>
+                <option>5 years</option>
                 <option>4+ years</option>
               </select>
               <label class="block">

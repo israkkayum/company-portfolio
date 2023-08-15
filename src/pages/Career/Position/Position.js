@@ -20,7 +20,7 @@ const Position = () => {
             {/* /// col 1 /// */}
             <div class="bg-gray-100 rounded-lg px-6 py-10">
               <h3 class="text-neutral-700 text-xl font-bold tracking-tight py-2">
-                Senior SQA Engineer
+                Frontend developer
               </h3>
               <div className="group relative flex items-center rounded-lg">
                 <MapPinIcon
@@ -28,10 +28,10 @@ const Position = () => {
                   aria-hidden="true"
                 />
                 <h3 class="text-neutral-700 text-base font-medium tracking-tight py-2 pr-10">
-                  Chittagong
+                  Poland
                 </h3>
                 <h3 class="text-neutral-700 text-base font-medium tracking-tight py-2">
-                  Exp : 4-5 Years
+                  {/* Exp : 1-2 Years */}
                 </h3>
               </div>
               <div className="pt-3">
@@ -46,7 +46,7 @@ const Position = () => {
             {/* /// col 2 /// */}
             <div class="bg-gray-100 rounded-lg px-6 py-10">
               <h3 class="text-neutral-700 text-xl font-bold tracking-tight py-2">
-                Senior .NET Developer
+                Backend developer
               </h3>
               <div className="group relative flex items-center rounded-lg">
                 <MapPinIcon
@@ -54,10 +54,10 @@ const Position = () => {
                   aria-hidden="true"
                 />
                 <h3 class="text-neutral-700 text-base font-medium tracking-tight py-2 pr-10">
-                  Chittagong
+                  Poland
                 </h3>
                 <h3 class="text-neutral-700 text-base font-medium tracking-tight py-2">
-                  Exp : 4 Years
+                  {/* Exp : 1-2 Years */}
                 </h3>
               </div>
               <div className="pt-3">
@@ -72,7 +72,7 @@ const Position = () => {
             {/* /// col 3 /// */}
             <div class="bg-gray-100 rounded-lg px-6 py-10">
               <h3 class="text-neutral-700 text-xl font-bold tracking-tight py-2">
-                Senior Java Developer
+                Backend developer
               </h3>
               <div className="group relative flex items-center rounded-lg">
                 <MapPinIcon
@@ -80,10 +80,10 @@ const Position = () => {
                   aria-hidden="true"
                 />
                 <h3 class="text-neutral-700 text-base font-medium tracking-tight py-2 pr-10">
-                  Chittagong
+                  Poland
                 </h3>
                 <h3 class="text-neutral-700 text-base font-medium tracking-tight py-2">
-                  Exp : 4-5 Years
+                  {/* Exp : 1-2 Years */}
                 </h3>
               </div>
               <div className="pt-3">
@@ -98,7 +98,7 @@ const Position = () => {
             {/* /// col 4 /// */}
             <div class="bg-gray-100 rounded-lg px-6 py-10">
               <h3 class="text-neutral-700 text-xl font-bold tracking-tight py-2">
-                Senior PHP Developer
+                UI / UX Designers
               </h3>
               <div className="group relative flex items-center rounded-lg">
                 <MapPinIcon
@@ -106,10 +106,36 @@ const Position = () => {
                   aria-hidden="true"
                 />
                 <h3 class="text-neutral-700 text-base font-medium tracking-tight py-2 pr-10">
-                  Chittagong
+                  Poland
                 </h3>
                 <h3 class="text-neutral-700 text-base font-medium tracking-tight py-2">
-                  Exp : 4-5 Years
+                  {/* Exp : 1-2 Years */}
+                </h3>
+              </div>
+              <div className="pt-3">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-xl font-medium leading-7 text-indigo-600"
+                >
+                  Explore <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+            {/* col 5 */}
+            <div class="bg-gray-100 rounded-lg px-6 py-10">
+              <h3 class="text-neutral-700 text-xl font-bold tracking-tight py-2">
+                Product Manager
+              </h3>
+              <div className="group relative flex items-center rounded-lg">
+                <MapPinIcon
+                  className="h-8 w-8 text-gray-600 pr-2 group-hover:text-indigo-600"
+                  aria-hidden="true"
+                />
+                <h3 class="text-neutral-700 text-base font-medium tracking-tight py-2 pr-10">
+                  Poland
+                </h3>
+                <h3 class="text-neutral-700 text-base font-medium tracking-tight py-2">
+                  {/* Exp : 1-2 Years */}
                 </h3>
               </div>
               <div className="pt-3">

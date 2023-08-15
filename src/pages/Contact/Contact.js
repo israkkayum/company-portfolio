@@ -38,14 +38,18 @@ const Contact = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setSuccess("true");
+        if (data.success) {
+          setSuccess(true);
+        } else {
+          setSuccess(false);
+        }
+        // console.log(data);
         setIsLoading(false);
         setMessageActive(true);
       })
       .catch((error) => {
-        console.error(error);
-        setSuccess("false");
+        // console.error(error);
+        setSuccess(false);
         setIsLoading(false);
         setMessageActive(true);
       });
@@ -97,7 +101,7 @@ const Contact = () => {
                   id="firstName"
                   autoComplete="firstName"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="Israk"
+                  // placeholder="Israk"
                   value={formData.firstName}
                   onChange={handleInputChange}
                   required
@@ -119,7 +123,7 @@ const Contact = () => {
                   id="lastName"
                   autoComplete="lastName"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="Kayum"
+                  // placeholder="Kayum"
                   value={formData.lastName}
                   onChange={handleInputChange}
                   required
@@ -141,7 +145,7 @@ const Contact = () => {
                   id="email"
                   autoComplete="email"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="israk.kayum@gmail.com"
+                  // placeholder="israk.kayum@gmail.com"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -163,7 +167,7 @@ const Contact = () => {
                   id="phoneNumber"
                   autoComplete="phoneNumber"
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="0199xxxxxxx"
+                  // placeholder="0199xxxxxxx"
                   value={formData.phoneNumber}
                   onChange={handleInputChange}
                   required
@@ -276,9 +280,9 @@ const Contact = () => {
             </svg>
             <span class="sr-only">Info</span>
             {success ? (
-              <div>Your Resume Successful Submitted !!</div>
+              <div>Your contact details have been successfully received!</div>
             ) : (
-              <div>Sorry! Your Resume Submission Failure !!</div>
+              <div>Your submission failed, please try again</div>
             )}
           </div>
         )}

@@ -7,7 +7,7 @@ import Header from "./pages/Share/Header/Header";
 import Home from "./pages/Home/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import PageNotFound from "./pages/Share/PageNotFound/PageNotFound";
-import Blog from "./pages/Blog/Blog";
+// import Blog from "./pages/Blog/Blog";
 import About from "./pages/AboutUs/About/About";
 import Career from "./pages/Career/Career/Career";
 import ServiceOne from "./pages/Services/ServiceOne/ServiceOne/ServiceOne";
@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<Home></Home>} />
         <Route path="/home" element={<Home></Home>} />
         <Route path="/contact" element={<Contact></Contact>} />
-        <Route path="/blog" element={<Blog></Blog>} />
+        <Route path="/blog" element={<PageNotFound></PageNotFound>} />
         <Route path="/about" element={<About></About>} />
         <Route path="/career" element={<Career></Career>} />
         <Route

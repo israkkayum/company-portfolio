@@ -14,7 +14,7 @@ const HiringProcess = () => {
             How to Join Our Dynamic Team
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Become a part of the xyz family through our thorough 4-step hiring
+            Become a part of the ANJI family through our thorough 4-step hiring
             process.
           </p>
         </div>

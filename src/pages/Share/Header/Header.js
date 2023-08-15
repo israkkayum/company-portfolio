@@ -20,7 +20,9 @@ import {
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import logo from "../../../images/ANJI.png";
 
 // service list
 const services = [
@@ -75,7 +77,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className="bg-white">
+      <header className="bg-white fixed top-0 left-0 right-0 z-40">
         {/* ----- desktop menu -------- */}
 
         <nav
@@ -83,35 +85,32 @@ const Header = () => {
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <NavLink to="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
-            </NavLink>
+            <Link to="/" reloadDocument className="-m-1.5 p-1.5">
+              <span className="sr-only">ANJI</span>
+              <img className="h-6 w-auto" src={logo} alt="" />
+            </Link>
           </div>
 
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-indigo-600 font-bold"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              <Bars3Icon className="h-7 w-7" aria-hidden="true" />
             </button>
           </div>
 
           {/* menu list  */}
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            <NavLink
+            <Link
+              reloadDocument
               to="/home"
               className="font-semibold text-base leading-6 text-gray-900 hover:text-indigo-600"
             >
               Home
-            </NavLink>
+            </Link>
 
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 font-semibold text-base leading-6 text-gray-900">
@@ -145,13 +144,14 @@ const Header = () => {
                           />
                         </div>
                         <div className="flex-auto">
-                          <NavLink
+                          <Link
                             to={item.href}
+                            reloadDocument
                             className="block font-semibold text-gray-900"
                           >
                             {item.name}
                             <span className="absolute inset-0" />
-                          </NavLink>
+                          </Link>
                           <p className="mt-1 text-gray-600">
                             {item.description}
                           </p>
@@ -161,9 +161,10 @@ const Header = () => {
                   </div>
                   <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                     {callsToAction.map((item) => (
-                      <NavLink
+                      <Link
                         key={item.name}
                         to={item.href}
+                        reloadDocument
                         className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                       >
                         <item.icon
@@ -171,39 +172,43 @@ const Header = () => {
                           aria-hidden="true"
                         />
                         {item.name}
-                      </NavLink>
+                      </Link>
                     ))}
                   </div>
                 </Popover.Panel>
               </Transition>
             </Popover>
 
-            <NavLink
+            <Link
               to="/career"
+              reloadDocument
               className="font-semibold text-base leading-6 text-gray-900 hover:text-indigo-600"
             >
               Career
-            </NavLink>
-            <NavLink
+            </Link>
+            <Link
               to="/about"
+              reloadDocument
               className="font-semibold text-base leading-6 text-gray-900 hover:text-indigo-600"
             >
               About
-            </NavLink>
-            <NavLink
+            </Link>
+            <Link
               to="/blog"
+              reloadDocument
               className="font-semibold text-base leading-6 text-gray-900 hover:text-indigo-600"
             >
               Blog
-            </NavLink>
+            </Link>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <NavLink
+            <Link
               to="/contact"
+              reloadDocument
               className="font-semibold text-base leading-6 text-indigo-600"
             >
               Contact Us <span aria-hidden="true">&rarr;</span>
-            </NavLink>
+            </Link>
           </div>
         </nav>
 
@@ -214,17 +219,13 @@ const Header = () => {
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
         >
-          <div className="fixed inset-0 z-10" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="fixed inset-0 z-50" />
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <NavLink to="/" className="-m-1.5 p-1.5 ">
-                <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
-              </NavLink>
+              <Link to="/" reloadDocument className="-m-1.5 p-1.5 ">
+                <span className="sr-only">ANJI</span>
+                <img className="h-6 w-auto" src={logo} alt="" />
+              </Link>
 
               {/* --- close menu ---- */}
               <button
@@ -234,7 +235,7 @@ const Header = () => {
               >
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon
-                  className="h-6 w-6 text-indigo-600"
+                  className="h-7 w-7 text-indigo-600 font-bold"
                   aria-hidden="true"
                 />
               </button>
@@ -242,13 +243,14 @@ const Header = () => {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  <NavLink
+                  <Link
                     to="/"
+                    reloadDocument
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Home
-                  </NavLink>
+                  </Link>
                   <Disclosure as="div" className="-mx-3">
                     {({ open }) => (
                       <>
@@ -277,36 +279,40 @@ const Header = () => {
                       </>
                     )}
                   </Disclosure>
-                  <NavLink
+                  <Link
                     to="/career"
+                    reloadDocument
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Career
-                  </NavLink>
-                  <NavLink
+                  </Link>
+                  <Link
                     to="/about"
+                    reloadDocument
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     About
-                  </NavLink>
-                  <NavLink
+                  </Link>
+                  <Link
                     to="/blog"
+                    reloadDocument
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Blog
-                  </NavLink>
+                  </Link>
                 </div>
                 <div className="py-6">
-                  <NavLink
+                  <Link
                     to="contact"
+                    reloadDocument
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-indigo-600 hover:bg-gray-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Contact Us <span aria-hidden="true">&rarr;</span>
-                  </NavLink>
+                  </Link>
                 </div>
               </div>
             </div>

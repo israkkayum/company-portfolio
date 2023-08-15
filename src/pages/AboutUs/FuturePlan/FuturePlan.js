@@ -2,7 +2,7 @@ import React from "react";
 
 import ourMission from "../../../images/our-mission.png";
 import ourVision from "../../../images/our-vision.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const FuturePlan = () => {
   return (
@@ -56,12 +56,13 @@ const FuturePlan = () => {
                   </p>
                   <p className="mt-6 text-base leading-8 text-gray-700">
                     Go{" "}
-                    <NavLink
+                    <Link
                       className="text-indigo-600 font-semibold"
                       to="/contact"
+                      reloadDocument
                     >
                       here{" "}
-                    </NavLink>
+                    </Link>
                     to send us a quick request and we’ll get back to you with an
                     overview ASAP.
                   </p>

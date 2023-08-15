@@ -13,8 +13,8 @@ const Home = () => {
       <ExtraSectionOne></ExtraSectionOne>
       <ExtraSectionTwo></ExtraSectionTwo>
       <ExtraSectionThree></ExtraSectionThree>
-      <Testimonials></Testimonials>
-      <FAQ></FAQ>
+      {/* <Testimonials></Testimonials> */}
+      {/* <FAQ></FAQ> */}
     </div>
   );
 };

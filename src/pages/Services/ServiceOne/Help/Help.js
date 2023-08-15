@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Help = () => {
   const [formData, setFormData] = useState({
@@ -39,14 +39,18 @@ const Help = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setSuccess("true");
+        if (data.success) {
+          setSuccess(true);
+        } else {
+          setSuccess(false);
+        }
+        // console.log(data);
         setIsLoading(false);
         setMessageActive(true);
       })
       .catch((error) => {
-        console.error(error);
-        setSuccess("false");
+        // console.error(error);
+        setSuccess(false);
         setIsLoading(false);
         setMessageActive(true);
       });
@@ -124,18 +128,19 @@ const Help = () => {
                   </div>
                 </div>
                 <div className="py-6">
-                  <NavLink
+                  <Link
                     to="/contact"
+                    reloadDocument
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-1xl font-semibold leading-7 text-indigo-600 hover:bg-gray-50"
                   >
                     Contact US <span aria-hidden="true">&rarr;</span>
-                  </NavLink>
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* /////// form //////// */}
-            <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden bg-gray-100 rounded-md">
+            <div className="-ml-0 lg:-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden bg-gray-100 rounded-md">
               <form onSubmit={handleSubmit} className="mx-auto max-w-xl">
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div>
@@ -296,9 +301,11 @@ const Help = () => {
                   </svg>
                   <span class="sr-only">Info</span>
                   {success ? (
-                    <div>Your Resume Successful Submitted !!</div>
+                    <div>
+                      Your contact details have been successfully received!
+                    </div>
                   ) : (
-                    <div>Sorry! Your Resume Submission Failure !!</div>
+                    <div>Your submission failed, please try again</div>
                   )}
                 </div>
               )}

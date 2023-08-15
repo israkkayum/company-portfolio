@@ -39,7 +39,7 @@ const WhatIsAnji = () => {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-5xl text-center">
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            What Is An ANJI
+            What is an ANJI
           </p>
         </div>
         <div className="mt-16 sm:mt-20 lg:mt-24">

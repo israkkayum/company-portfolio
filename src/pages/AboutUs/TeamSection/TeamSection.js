@@ -1,16 +1,17 @@
 import React from "react";
+
 const people = [
   {
     name: "Murad Atlukhanov",
     role: "Co-Founder / CEO",
     imageUrl:
-      "https://media.licdn.com/dms/image/C5603AQHGq0KJlAlZTA/profile-displayphoto-shrink_800_800/0/1612434702135?e=2147483647&v=beta&t=SGVuW1RbcPr0qc4NrPS8k6Q9NFlJUyusFLB89WIkl4k",
+      "https://indianostrum.org/wp-content/uploads/2022/11/person-avator.png",
   },
   {
     name: "Ahmet Coşkun",
     role: "Co-Founder / CEO",
     imageUrl:
-      "https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/292292098_105634188879764_1511036094717385031_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=be3454&_nc_ohc=GscQR5AqJ6MAX8jqzWF&_nc_ht=scontent.fdac138-1.fna&oh=00_AfD9RQZzhEW-J-et5AOAcXyD-MtRVXwsJyGhZw8J6d2Hqw&oe=64DE2416",
+      "https://indianostrum.org/wp-content/uploads/2022/11/person-avator.png",
   },
   // More people...
 ];
