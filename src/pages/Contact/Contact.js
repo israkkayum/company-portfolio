@@ -32,7 +32,7 @@ const Contact = () => {
     formDataToSend.append("service", formData.service);
     formDataToSend.append("message", formData.message);
 
-    fetch("http://localhost:6500/send-email-contact", {
+    fetch("https://company-portfolio-server.vercel.app/send-email-contact", {
       method: "POST",
       body: formDataToSend,
     })

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const Apply = ({ scrollRef }) => {
   const [formData, setFormData] = useState({
@@ -29,7 +30,47 @@ const Apply = ({ scrollRef }) => {
   };
 
   // form submit
-  const handleSubmit = (event) => {
+  // const handleSubmit = (event) => {
+  //   setIsLoading(true);
+
+  //   const formDataToSend = new FormData();
+  //   formDataToSend.append("firstName", formData.firstName);
+  //   formDataToSend.append("lastName", formData.lastName);
+  //   formDataToSend.append("email", formData.email);
+  //   formDataToSend.append("phoneNumber", formData.phoneNumber);
+  //   formDataToSend.append("position", formData.position);
+  //   formDataToSend.append("experience", formData.experience);
+  //   formDataToSend.append("address", formData.address);
+  //   formDataToSend.append("file", formData.file);
+
+  //   fetch("https://company-portfolio-server.vercel.app/send-email", {
+  //     method: "POST",
+  //     body: formDataToSend,
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       if (data.success) {
+  //         setSuccess(true);
+  //       } else {
+  //         setSuccess(false);
+  //       }
+  //       // console.log(data);
+  //       setIsLoading(false);
+  //       setMessageActive(true);
+  //     })
+  //     .catch((error) => {
+  //       // console.error(error);
+  //       setSuccess(false);
+  //       setIsLoading(false);
+  //       setMessageActive(true);
+  //     });
+
+  //   // event.target.reset();
+  //   event.preventDefault();
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     setIsLoading(true);
 
     const formDataToSend = new FormData();
@@ -42,30 +83,29 @@ const Apply = ({ scrollRef }) => {
     formDataToSend.append("address", formData.address);
     formDataToSend.append("file", formData.file);
 
-    fetch("http://localhost:6500/send-email", {
-      method: "POST",
-      body: formDataToSend,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          setSuccess(true);
-        } else {
-          setSuccess(false);
+    try {
+      const response = await axios.post(
+        "https://company-portfolio-server.vercel.app/send-email",
+        formDataToSend,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
         }
-        // console.log(data);
-        setIsLoading(false);
-        setMessageActive(true);
-      })
-      .catch((error) => {
-        // console.error(error);
-        setSuccess(false);
-        setIsLoading(false);
-        setMessageActive(true);
-      });
+      );
 
-    // event.target.reset();
-    event.preventDefault();
+      if (response.status === 200) {
+        setSuccess(true);
+        setIsLoading(false);
+        setMessageActive(true);
+      } else {
+        alert("Error sending email.");
+      }
+    } catch (error) {
+      setSuccess(false);
+      setIsLoading(false);
+      setMessageActive(true);
+    }
   };
 
   // cancel button

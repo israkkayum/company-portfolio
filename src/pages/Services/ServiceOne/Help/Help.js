@@ -33,10 +33,13 @@ const Help = () => {
     formDataToSend.append("phoneNumber", formData.phoneNumber);
     formDataToSend.append("details", formData.details);
 
-    fetch("http://localhost:6500/send-email-project-details", {
-      method: "POST",
-      body: formDataToSend,
-    })
+    fetch(
+      "https://company-portfolio-server.vercel.app/send-email-project-details",
+      {
+        method: "POST",
+        body: formDataToSend,
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
