@@ -43,21 +43,19 @@ const HeaderSection = () => {
             <div className="lg:pr-4">
               {/* ///////// message ///////// */}
               <div className="lg:max-w-lg">
-                <p className="text-base font-semibold leading-7 text-indigo-600">
-                  Welcome to ANJI 🙌
+                <p className="text-base font-semibold leading-7 text-blue-600">
+                  Welcome to Fatiksolution
                 </p>
-                <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Leading Software Development Company
+                <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                  Your Trusted Technology Partner
                 </h1>
-                <p className="mt-6 text-xl leading-8 text-gray-700">
-                  Set your company with quality software solutions from a
-                  dependable partner. Teams that can most effectively design,
-                  develop, space, and scale your concept
+                <p className="mt-6 text-xl leading-8 text-gray-600">
+                  At Fatiksolution, we combine technical excellence with business acumen to deliver software solutions that drive measurable results. Our experienced team transforms complex challenges into elegant, scalable solutions.
                 </p>
               </div>
               {/* //////// Button ////////// */}
               <Link to="/contact" reloadDocument>
-                <button class="rounded-lg bg-indigo-600 text-lg text-white font-semibold py-5 px-10 my-10">
+                <button className="rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-lg text-white font-semibold py-4 px-8 my-10 shadow-lg">
                   Contact Us
                 </button>
               </Link>

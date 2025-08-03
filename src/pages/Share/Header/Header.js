@@ -22,7 +22,12 @@ import {
 
 import { Link } from "react-router-dom";
 
-import logo from "../../../images/ANJI.png";
+// Create a text-based logo since we're changing the company name
+const TextLogo = () => (
+  <div className="text-2xl font-bold text-blue-600">
+    Fatiksolution
+  </div>
+);
 
 // service list
 const services = [
@@ -86,15 +91,15 @@ const Header = () => {
         >
           <div className="flex lg:flex-1">
             <Link to="/" reloadDocument className="-m-1.5 p-1.5">
-              <span className="sr-only">ANJI</span>
-              <img className="h-6 w-auto" src={logo} alt="" />
+              <span className="sr-only">Fatiksolution</span>
+              <TextLogo />
             </Link>
           </div>
 
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-indigo-600 font-bold"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-600 font-bold"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -107,7 +112,7 @@ const Header = () => {
             <Link
               reloadDocument
               to="/home"
-              className="font-semibold text-base leading-6 text-gray-900 hover:text-indigo-600"
+              className="font-semibold text-base leading-6 text-gray-900 hover:text-blue-600 transition-colors duration-200"
             >
               Home
             </Link>
@@ -116,7 +121,7 @@ const Header = () => {
               <Popover.Button className="flex items-center gap-x-1 font-semibold text-base leading-6 text-gray-900">
                 Services
                 <ChevronDownIcon
-                  className="h-5 w-5 flex-none text-indigo-600 font-semibold"
+                  className="h-5 w-5 flex-none text-blue-600 font-semibold"
                   aria-hidden="true"
                 />
               </Popover.Button>
@@ -139,7 +144,7 @@ const Header = () => {
                       >
                         <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                           <item.icon
-                            className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                            className="h-6 w-6 text-gray-600 group-hover:text-blue-600"
                             aria-hidden="true"
                           />
                         </div>
@@ -182,21 +187,21 @@ const Header = () => {
             <Link
               to="/career"
               reloadDocument
-              className="font-semibold text-base leading-6 text-gray-900 hover:text-indigo-600"
+              className="font-semibold text-base leading-6 text-gray-900 hover:text-blue-600 transition-colors duration-200"
             >
               Career
             </Link>
             <Link
               to="/about"
               reloadDocument
-              className="font-semibold text-base leading-6 text-gray-900 hover:text-indigo-600"
+              className="font-semibold text-base leading-6 text-gray-900 hover:text-blue-600 transition-colors duration-200"
             >
               About
             </Link>
             <Link
               to="/blog"
               reloadDocument
-              className="font-semibold text-base leading-6 text-gray-900 hover:text-indigo-600"
+              className="font-semibold text-base leading-6 text-gray-900 hover:text-blue-600 transition-colors duration-200"
             >
               Blog
             </Link>
@@ -205,7 +210,7 @@ const Header = () => {
             <Link
               to="/contact"
               reloadDocument
-              className="font-semibold text-base leading-6 text-indigo-600"
+              className="font-semibold text-base leading-6 text-blue-600 hover:text-blue-800 transition-colors duration-200"
             >
               Contact Us <span aria-hidden="true">&rarr;</span>
             </Link>
@@ -223,19 +228,19 @@ const Header = () => {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link to="/" reloadDocument className="-m-1.5 p-1.5 ">
-                <span className="sr-only">ANJI</span>
-                <img className="h-6 w-auto" src={logo} alt="" />
+                <span className="sr-only">Fatiksolution</span>
+                <TextLogo />
               </Link>
 
               {/* --- close menu ---- */}
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-indigo-600"
+                className="-m-2.5 rounded-md p-2.5 text-blue-600"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon
-                  className="h-7 w-7 text-indigo-600 font-bold"
+                  className="h-7 w-7 text-blue-600 font-bold"
                   aria-hidden="true"
                 />
               </button>
@@ -258,8 +263,8 @@ const Header = () => {
                           Services
                           <ChevronDownIcon
                             className={classNames(
-                              open ? "rotate-180 text-indigo-600" : "",
-                              "h-5 w-5 flex-none text-indigo-600"
+                              open ? "rotate-180 text-blue-600" : "",
+                              "h-5 w-5 flex-none text-blue-600"
                             )}
                             aria-hidden="true"
                           />
@@ -308,7 +313,7 @@ const Header = () => {
                   <Link
                     to="contact"
                     reloadDocument
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-indigo-600 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-blue-600 hover:bg-gray-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Contact Us <span aria-hidden="true">&rarr;</span>

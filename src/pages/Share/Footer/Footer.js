@@ -1,9 +1,15 @@
 import React from "react";
 
 import backgroundImage from "../../../images/background-color.svg";
-import logo from "../../../images/anji-nbg.png";
 
 import { Link, NavLink } from "react-router-dom";
+
+// Create a text-based logo for footer
+const FooterLogo = () => (
+  <div className="text-2xl font-bold text-blue-600">
+    Fatiksolution
+  </div>
+);
 
 const Footer = () => {
   return (
@@ -18,11 +24,14 @@ const Footer = () => {
           <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
               <Link to="/" reloadDocument class="flex items-center">
-                <img src={logo} class="h-8 mr-3" alt="FlowBite Logo" />
+                <FooterLogo />
               </Link>
               <div class="max-w-xl lg:max-w-lg mt-10">
-                <p class="mt-2 text-sm font-semibold leading-8 text-gray-600">
-                  Get Updated with us Regularly
+                <p class="mt-2 text-lg font-semibold leading-8 text-gray-700">
+                  Stay Connected with Fatiksolution
+                </p>
+                <p class="mt-2 text-sm leading-6 text-gray-600">
+                  Subscribe to receive updates on our latest projects, technology insights, and industry trends.
                 </p>
                 <div class="mt-2 flex max-w-md gap-x-4">
                   <label for="email-address" class="sr-only">
@@ -34,12 +43,12 @@ const Footer = () => {
                     type="email"
                     autocomplete="email"
                     required
-                    class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                     placeholder="Enter your email"
                   />
                   <button
                     type="submit"
-                    class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                    class="flex-none rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
                   >
                     Subscribe
                   </button>
@@ -48,42 +57,42 @@ const Footer = () => {
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 class="mb-6 font-bold text-lg uppercase text-indigo-600">
+                <h2 class="mb-6 font-bold text-lg uppercase text-blue-600">
                   Company
                 </h2>
-                <ul class="font-medium text-base text-gray-600">
+                <ul class="font-medium text-base text-gray-700">
                   <li class="mb-4">
-                    <Link to="/about" reloadDocument class="hover:underline">
+                    <Link to="/about" reloadDocument class="hover:text-blue-600 transition-colors">
                       About Us
                     </Link>
                   </li>
                   <li class="mb-4">
-                    <Link to="/blog" reloadDocument class="hover:underline">
+                    <Link to="/blog" reloadDocument class="hover:text-blue-600 transition-colors">
                       Blog
                     </Link>
                   </li>
                   <li class="mb-4">
-                    <Link to="/career" reloadDocument class="hover:underline">
+                    <Link to="/career" reloadDocument class="hover:text-blue-600 transition-colors">
                       Career
                     </Link>
                   </li>
                   <li>
-                    <Link to="/contact" reloadDocument class="hover:underline">
+                    <Link to="/contact" reloadDocument class="hover:text-blue-600 transition-colors">
                       Contact
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 class="mb-6 font-bold text-lg uppercase text-indigo-600">
+                <h2 class="mb-6 font-bold text-lg uppercase text-blue-600">
                   Services
                 </h2>
-                <ul class="font-medium text-base text-gray-600">
+                <ul class="font-medium text-base text-gray-700">
                   <li class="mb-4">
                     <Link
                       to="/services/service-one"
                       reloadDocument
-                      class="hover:underline "
+                      class="hover:text-blue-600 transition-colors"
                     >
                       Mobile App
                     </Link>
@@ -92,7 +101,7 @@ const Footer = () => {
                     <Link
                       to="/services/service-one"
                       reloadDocument
-                      class="hover:underline "
+                      class="hover:text-blue-600 transition-colors"
                     >
                       Backend Development
                     </Link>
@@ -101,7 +110,7 @@ const Footer = () => {
                     <Link
                       to="/services/service-one"
                       reloadDocument
-                      class="hover:underline "
+                      class="hover:text-blue-600 transition-colors"
                     >
                       Frontend Development
                     </Link>
@@ -110,7 +119,7 @@ const Footer = () => {
                     <Link
                       to="/services/service-one"
                       reloadDocument
-                      class="hover:underline "
+                      class="hover:text-blue-600 transition-colors"
                     >
                       UI/UX Design
                     </Link>
@@ -119,7 +128,7 @@ const Footer = () => {
                     <Link
                       to="/services/service-one"
                       reloadDocument
-                      class="hover:underline "
+                      class="hover:text-blue-600 transition-colors"
                     >
                       Websites (end-to-end)
                     </Link>
@@ -128,7 +137,7 @@ const Footer = () => {
                     <Link
                       to="/services/service-one"
                       reloadDocument
-                      class="hover:underline "
+                      class="hover:text-blue-600 transition-colors"
                     >
                       Corporate Identity
                     </Link>
@@ -136,33 +145,33 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 class="mb-6 font-bold text-lg uppercase text-indigo-600">
-                  Developers for Hiring
+                <h2 class="mb-6 font-bold text-lg uppercase text-blue-600">
+                  Hire Developers
                 </h2>
-                <ul class="text-base text-gray-600 font-medium">
+                <ul class="text-base text-gray-700 font-medium">
                   <li class="mb-4">
-                    <Link to="/contact" reloadDocument class="hover:underline ">
-                      Hire Developers
+                    <Link to="/contact" reloadDocument class="hover:text-blue-600 transition-colors">
+                      Full-Stack Developers
                     </Link>
                   </li>
                   <li class="mb-4">
-                    <Link to="/contact" reloadDocument class="hover:underline ">
+                    <Link to="/contact" reloadDocument class="hover:text-blue-600 transition-colors">
                       Hire JavaScript Developers
                     </Link>
                   </li>
                   <li class="mb-4">
-                    <Link to="/contact" reloadDocument class="hover:underline ">
+                    <Link to="/contact" reloadDocument class="hover:text-blue-600 transition-colors">
                       Hire Python Developers
                     </Link>
                   </li>
                   <li class="mb-4">
-                    <Link to="/contact" reloadDocument class="hover:underline ">
+                    <Link to="/contact" reloadDocument class="hover:text-blue-600 transition-colors">
                       Hire Java Developers
                     </Link>
                   </li>
                   <li>
-                    <Link to="/contact" reloadDocument class="hover:underline ">
-                      Hire Golang Developers
+                    <Link to="/contact" reloadDocument class="hover:text-blue-600 transition-colors">
+                      Hire React Developers
                     </Link>
                   </li>
                 </ul>
@@ -171,10 +180,10 @@ const Footer = () => {
           </div>
           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-300 lg:my-8" />
           <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-black-600 sm:text-center dark:text-black-600">
-              © 2023{" "}
-              <Link to="/" reloadDocument class="hover:underline">
-                ANJI
+            <span class="text-sm text-gray-600 sm:text-center">
+              © 2024{" "}
+              <Link to="/" reloadDocument class="hover:text-blue-600 transition-colors font-semibold">
+                Fatiksolution
               </Link>
               . All Rights Reserved.
             </span>
@@ -182,7 +191,7 @@ const Footer = () => {
               <Link
                 to="/"
                 reloadDocument
-                class="text-indigo-600 hover:text-gray-900 dark:hover:text-indigo-600"
+                class="text-blue-600 hover:text-blue-800 transition-colors"
               >
                 <svg
                   class="w-4 h-4"
@@ -202,7 +211,7 @@ const Footer = () => {
               <Link
                 to="/"
                 reloadDocument
-                class="text-indigo-600 hover:text-gray-900 dark:hover:text-indigo-600"
+                class="text-blue-600 hover:text-blue-800 transition-colors"
               >
                 <svg
                   class="w-4 h-4"
@@ -218,7 +227,7 @@ const Footer = () => {
               <Link
                 to="/"
                 reloadDocument
-                class="text-indigo-600 hover:text-gray-900 dark:hover:text-indigo-600"
+                class="text-blue-600 hover:text-blue-800 transition-colors"
               >
                 <svg
                   class="w-4 h-4"
@@ -238,7 +247,7 @@ const Footer = () => {
               <Link
                 to="/"
                 reloadDocument
-                class="text-indigo-600 hover:text-gray-900 dark:hover:text-indigo-600"
+                class="text-blue-600 hover:text-blue-800 transition-colors"
               >
                 <svg
                   class="w-4 h-4"
@@ -258,7 +267,7 @@ const Footer = () => {
               <Link
                 to="/"
                 reloadDocument
-                class="text-indigo-600 hover:text-gray-900 dark:hover:text-indigo-600"
+                class="text-blue-600 hover:text-blue-800 transition-colors"
               >
                 <svg
                   class="w-4 h-4"

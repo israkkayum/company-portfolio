@@ -8,27 +8,27 @@ import innovative from "../../../images/innovative.jpg";
 ///// data
 const features = [
   {
-    name: "AGILE",
+    name: "AGILE METHODOLOGY",
     description:
-      "ELI5; it's simply breaking down a large-enough project into smaller pieces, right? It's what we do to ensure we prioritize what needs to be and no part has been overlooked.",
+      "We implement proven agile practices to ensure rapid delivery, continuous improvement, and adaptive project management. Our iterative approach guarantees that every requirement is met with precision.",
     icon: agile,
   },
   {
-    name: "NOVEL",
+    name: "INNOVATIVE SOLUTIONS",
     description:
-      "...and this is the way we do it. With an experienced and dedicated team of developers, we bring together different approaches and up-to-date methodology to put forward the optimum original solution.",
+      "Our experienced team combines cutting-edge technologies with creative problem-solving to deliver unique, scalable solutions that give you a competitive edge in the market.",
     icon: novel,
   },
   {
-    name: "JUSTINIAN",
+    name: "QUALITY ASSURANCE",
     description:
-      "Just as Justinian the Great was known for being a man of codes, we codify your ideas as if they are our own, how you want it; justifying your project.",
+      "We maintain the highest standards of code quality and system reliability. Every solution undergoes rigorous testing and quality assurance processes to ensure optimal performance.",
     icon: justinian,
   },
   {
-    name: "INNOVATIVE",
+    name: "CLIENT-CENTRIC APPROACH",
     description:
-      "We're not after rediscovering America; but we are well aware that innovation is the key to turning your ideas into successful products. Innovation requires a bit more than just listening to the customer, and here we make sure you're directly included in the process to bring about our signature in the end result : ANJI",
+      "Your success is our priority. We work closely with clients throughout the development process, ensuring transparent communication, regular updates, and solutions that align perfectly with your business objectives.",
     icon: innovative,
   },
 ];
@@ -38,28 +38,31 @@ const WhatIsAnji = () => {
     <div className="bg-white-50 py-10 sm:py-20">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            What is an ANJI
+          <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            The Fatiksolution Advantage
+          </p>
+          <p className="mt-6 text-xl leading-8 text-gray-600">
+            Our core values and methodologies that drive exceptional results
           </p>
         </div>
         <div className="mt-16 sm:mt-20 lg:mt-24">
           {/* /// grid -> card /// */}
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-4 md:grid-cols-2 md:max-w-none lg:gap-y-8 lg:gap-x-5">
             {features.map((feature) => (
-              <div class="bg-gray-100 rounded-lg px-6 py-6 shadow-sm hover:shadow-lg hover:border-indigo-700 hover:border-2 hover:bg-white">
+              <div className="bg-white rounded-xl px-6 py-8 shadow-lg hover:shadow-2xl hover:border-blue-500 hover:border-2 transition-all duration-300 transform hover:-translate-y-2">
                 <div>
-                  <span class="inline-flex items-center justify-center shadow-sm -m-4">
+                  <span className="inline-flex items-center justify-center shadow-sm -m-4">
                     <img
-                      className="h-48 w-screen flex-none text-white rounded"
+                      className="h-48 w-full object-cover flex-none text-white rounded-lg"
                       aria-hidden="true"
                       src={feature.icon}
                     />
                   </span>
                 </div>
-                <h3 class="text-neutral-700 mt-5 text-lg font-semibold tracking-tight py-2 font-mono subpixel-antialiased">
+                <h3 className="text-gray-900 mt-6 text-xl font-bold tracking-tight py-2">
                   {feature.name}
                 </h3>
-                <p class="font-sans mt-2 text-base antialiased font-normal leading-relaxed line-clamp-6 hover:line-clamp-none">
+                <p className="text-gray-600 mt-3 text-base leading-relaxed">
                   {feature.description}
                 </p>
               </div>

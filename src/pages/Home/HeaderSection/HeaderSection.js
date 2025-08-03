@@ -50,17 +50,35 @@ const HeaderSection = () => {
             <div className="lg:pr-4">
               {/* ///////// message ///////// */}
               <div className="lg:max-w-lg">
-                <p className="text-base font-semibold leading-7 text-indigo-600">
-                  Global Software Solutions 🚀
+                <p className="text-base font-semibold leading-7 text-blue-600">
+                  Professional Software Development
                 </p>
-                <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Empowering Your Vision with Agile Development Teams
+                <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                  Transform Your Business with <span className="text-blue-600">Fatiksolution</span>
                 </h1>
-                <p className="mt-6 text-xl leading-8 text-gray-700">
-                  Crafting outstanding digital experiences for your success.
-                  Whether it's web design, mobile apps, or more, we've got you
-                  covered. Let's build your digital future together.
+                <p className="mt-6 text-xl leading-8 text-gray-600">
+                  We deliver cutting-edge software solutions that drive innovation and accelerate business growth. From enterprise applications to mobile platforms, we turn your vision into reality with precision and expertise.
                 </p>
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    500+ Projects Delivered
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    98% Client Satisfaction
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    24/7 Support
+                  </div>
+                </div>
               </div>
               {/* ////////  Story //////////
               <div className="bg-white py-10 sm:py-10">
@@ -84,8 +102,13 @@ const HeaderSection = () => {
               </div> */}
               {/* //////// Button ////////// */}
               <Link to="/contact" reloadDocument>
-                <button class="rounded-lg bg-indigo-600 text-lg text-white font-semibold py-5 px-10 my-10">
-                  Hire Developers
+                <button className="rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-lg text-white font-semibold py-4 px-8 my-10 shadow-lg hover:shadow-xl">
+                  Start Your Project
+                </button>
+              </Link>
+              <Link to="/about" reloadDocument className="ml-4">
+                <button className="rounded-lg border-2 border-blue-600 text-lg text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold py-4 px-8 my-10">
+                  Learn More
                 </button>
               </Link>
             </div>

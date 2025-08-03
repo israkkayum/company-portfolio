@@ -74,12 +74,11 @@ const Contact = () => {
           />
         </div>
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Contact Us
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            Let's Build Something Amazing Together
           </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
-            Fill in the below form to receive a detailed estimation. One of our
-            friendly team member will be in touch soon
+          <p className="mt-4 text-xl leading-8 text-gray-600">
+            Ready to transform your ideas into reality? Get in touch with our expert team for a detailed consultation and project estimation. We'll respond within 24 hours.
           </p>
         </div>
         <form
@@ -228,12 +227,12 @@ const Contact = () => {
               <button
                 disabled
                 type="button"
-                class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+               className="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm"
               >
                 <svg
                   aria-hidden="true"
                   role="status"
-                  class="inline w-4 h-4 mr-3 text-white animate-spin"
+                 className="inline w-5 h-5 mr-3 text-white animate-spin"
                   viewBox="0 0 100 101"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -247,14 +246,14 @@ const Contact = () => {
                     fill="currentColor"
                   />
                 </svg>
-                Loading
+               Sending Message...
               </button>
             ) : (
               <button
                 type="submit"
-                className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+               className="block w-full rounded-md bg-blue-600 hover:bg-blue-700 transition-colors duration-300 px-3.5 py-3 text-center text-lg font-semibold text-white shadow-lg hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
-                Let's talk
+               Send Message
               </button>
             )}
           </div>
@@ -262,15 +261,15 @@ const Contact = () => {
         {/* // successful message //  */}
         {messageActive && (
           <div
-            class={
+            className={
               success
-                ? "flex items-center justify-center p-4 text-sm font-bold text-green-800 rounded-lg bg-green-50 mt-10 -mb-20 mx-auto max-w-xl"
-                : "flex items-center justify-center p-4 text-sm font-bold text-red-800 rounded-lg bg-red-50 mt-10 -mb-20 mx-auto max-w-xl"
+                ? "flex items-center justify-center p-4 text-base font-semibold text-green-800 rounded-lg bg-green-50 border border-green-200 mt-10 -mb-20 mx-auto max-w-xl"
+                : "flex items-center justify-center p-4 text-base font-semibold text-red-800 rounded-lg bg-red-50 border border-red-200 mt-10 -mb-20 mx-auto max-w-xl"
             }
             role="alert"
           >
             <svg
-              class="flex-shrink-0 inline w-4 h-4 mr-3"
+              className="flex-shrink-0 inline w-5 h-5 mr-3"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -278,11 +277,11 @@ const Contact = () => {
             >
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
             </svg>
-            <span class="sr-only">Info</span>
+            <span className="sr-only">Info</span>
             {success ? (
-              <div>Your contact details have been successfully received!</div>
+              <div>Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.</div>
             ) : (
-              <div>Your submission failed, please try again</div>
+              <div>Sorry, there was an error sending your message. Please try again or contact us directly.</div>
             )}
           </div>
         )}

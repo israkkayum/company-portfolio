@@ -14,55 +14,55 @@ import {
 ///// data
 const features = [
   {
-    name: "Scalable System Design",
+    name: "Enterprise Architecture",
     description:
-      "High-performing product giving you a tailored solution for your business.",
+      "Design and implement scalable, high-performance systems that grow with your business needs and handle enterprise-level demands.",
     icon: ComputerDesktopIcon,
   },
   {
     name: "Cloud Services",
     description:
-      "Cloud outsourcing provider managed cloud services for businesses..",
+      "Comprehensive cloud solutions including migration, optimization, and managed services across AWS, Azure, and Google Cloud platforms.",
     icon: CloudIcon,
   },
   {
     name: "DevOps Services",
     description:
-      "DevOps consulting services based on modern tools & technologies.",
+      "Streamline your development lifecycle with modern CI/CD pipelines, automated testing, and infrastructure as code practices.",
     icon: CogIcon,
   },
   {
-    name: "Big Data & Data Science",
-    description: "Drive business transformation through data analytics",
+    name: "Data Analytics & AI",
+    description: "Unlock business insights through advanced data analytics, machine learning, and artificial intelligence solutions.",
     icon: ServerStackIcon,
   },
   {
     name: "Database Management",
     description:
-      "DBMS establish the relationship between datasets, and how users interact with them.",
+      "Optimize data storage and retrieval with expert database design, performance tuning, and management services.",
     icon: CircleStackIcon,
   },
   {
-    name: "Embedded System Design",
+    name: "IoT & Embedded Systems",
     description:
-      "Provide high-quality embedded system design and embedded architecture design services.",
+      "Develop connected devices and embedded solutions that bridge the physical and digital worlds.",
     icon: WrenchScrewdriverIcon,
   },
   {
-    name: "Mobile Application Dev",
-    description: "We build your apps for all the devices out there.",
+    name: "Mobile Development",
+    description: "Create engaging mobile experiences across iOS and Android platforms with native and cross-platform solutions.",
     icon: DevicePhoneMobileIcon,
   },
   {
-    name: "UX Design",
+    name: "UI/UX Design",
     description:
-      "UX design ensures the quality of user journey of your digital products and services.",
+      "Design intuitive, user-centered interfaces that enhance user experience and drive engagement across all digital touchpoints.",
     icon: WindowIcon,
   },
   {
-    name: "SQA",
+    name: "Quality Assurance",
     description:
-      "Software test lifecycle services; from test planning to execution and everything in between.",
+      "Ensure software reliability through comprehensive testing strategies, automated testing frameworks, and quality assurance processes.",
     icon: ScaleIcon,
   },
 ];
@@ -73,16 +73,11 @@ const ExtraSectionTwo = () => {
       <div className="container mx-auto px-4 pt-10">
         {/* //// header /// */}
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Most Effective Software Development Outsourcing Service
+          <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            Comprehensive Technology Solutions
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            As your software development partner, we are committed to helping
-            you establish long-term business relationships. We offer a variety
-            of outsourcing services that can be tailored to your specific needs.
-            Our team of experts has extensive experience in all aspects of
-            software development, from enterprise applications to mobile apps
-            and everything in between.
+          <p className="mt-6 text-xl leading-8 text-gray-600">
+            As your trusted technology partner, Fatiksolution is committed to building long-term relationships that drive your business success. Our comprehensive suite of services covers every aspect of modern software development, from enterprise solutions to cutting-edge mobile applications.
           </p>
         </div>
 
@@ -92,19 +87,19 @@ const ExtraSectionTwo = () => {
 
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 md:grid-cols-2 lg:gap-y-8">
             {features.map((feature) => (
-              <div class="bg-gray-100 rounded-lg px-6 py-8 text-center">
+              <div className="bg-white rounded-xl px-6 py-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                 <div className="text-center">
-                  <span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
+                  <span className="inline-flex items-center justify-center p-3 bg-blue-600 rounded-lg shadow-lg">
                     <feature.icon
-                      className="h-6 w-6 flex-none text-white"
+                      className="h-7 w-7 flex-none text-white"
                       aria-hidden="true"
                     />
                   </span>
                 </div>
-                <h3 class="text-neutral-700 mt-5 text-lg font-semibold tracking-tight py-2">
+                <h3 className="text-gray-900 mt-6 text-xl font-bold tracking-tight py-2">
                   {feature.name}
                 </h3>
-                <p class="text-gray-600 mt-2 text-md">{feature.description}</p>
+                <p className="text-gray-600 mt-3 text-base leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </dl>

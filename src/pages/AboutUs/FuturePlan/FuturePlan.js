@@ -9,14 +9,11 @@ const FuturePlan = () => {
     <div className="bg-gray-100 py-10 sm:py-20 mt-20">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-5xl text-center">
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Our Future Plan
+          <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            Our Vision & Mission
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            As a leading software development company, Our company is committed
-            to delivering exceptional software solutions that meet the unique
-            needs of our clients. Our goal is to provide a world-class software
-            solution for our clients.
+          <p className="mt-6 text-xl leading-8 text-gray-600">
+            Fatiksolution is committed to delivering exceptional software solutions that drive digital transformation and business growth. We envision a future where technology seamlessly integrates with business objectives.
           </p>
         </div>
         {/* ///// our mission //////// */}
@@ -27,44 +24,31 @@ const FuturePlan = () => {
               <div className="lg:pr-4">
                 {/* ///////// message ///////// */}
                 <div className="lg:max-w-lg">
-                  <p className="text-xl font-semibold leading-7 text-indigo-600">
+                  <p className="text-2xl font-semibold leading-7 text-blue-600">
                     Our Mission
                   </p>
-                  <p className="mt-6 text-base leading-8 text-gray-700">
-                    Here at ANJI, you have a dedicated pole position. Each IT
-                    project comes with somewhat unique challenges and is a race
-                    on its own: we make sure you start off in the most
-                    advantageous position possible.
+                  <p className="mt-6 text-lg leading-8 text-gray-700">
+                    At Fatiksolution, we empower businesses through innovative technology solutions. Every project presents unique challenges, and we ensure our clients gain a competitive advantage through strategic implementation and cutting-edge development practices.
                   </p>
-                  <p className="mt-6 text-base leading-8 text-gray-700">
-                    ANJI is here to develop and deliver IT systems that provide
-                    users with a seamless experience, with a firm belief that
-                    technology adoption should be a choice driven by enjoyment,
-                    not a burdensome chore.
+                  <p className="mt-6 text-lg leading-8 text-gray-700">
+                    We develop and deliver IT systems that provide users with intuitive, seamless experiences. Our philosophy centers on making technology adoption effortless and enjoyable, not burdensome.
                   </p>
-                  <p className="mt-6 text-base leading-8 text-gray-700">
-                    You have an idea from scratch or an ongoing development
-                    project that needs scaling- leave it to us!
+                  <p className="mt-6 text-lg leading-8 text-gray-700">
+                    Whether you're starting from concept or scaling existing solutions, Fatiksolution provides comprehensive support throughout your digital journey.
                   </p>
-                  <p className="mt-6 text-base leading-8 text-gray-700">
-                    Specializing in end-to-end development solutions, covering
-                    every stage of the software development lifecycle from
-                    concept to deployment, our comprehensive approach ensures
-                    efficient project management, a smooth integration, and the
-                    delivery of high-quality, fully functional software
-                    solutions.
+                  <p className="mt-6 text-lg leading-8 text-gray-700">
+                    We specialize in end-to-end development solutions, covering every stage of the software development lifecycle. Our comprehensive approach ensures efficient project management, seamless integration, and delivery of high-quality, scalable software solutions.
                   </p>
-                  <p className="mt-6 text-base leading-8 text-gray-700">
+                  <p className="mt-6 text-lg leading-8 text-gray-700">
                     Go{" "}
                     <Link
-                      className="text-indigo-600 font-semibold"
+                      className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
                       to="/contact"
                       reloadDocument
                     >
                       here{" "}
                     </Link>
-                    to send us a quick request and we’ll get back to you with an
-                    overview ASAP.
+                    to discuss your project requirements and receive a comprehensive proposal within 24 hours.
                   </p>
                 </div>
               </div>
@@ -89,12 +73,14 @@ const FuturePlan = () => {
               <div className="lg:pr-4">
                 {/* ///////// message ///////// */}
                 <div className="lg:max-w-lg">
-                  <p className="text-xl font-semibold leading-7 text-indigo-600">
+                  <p className="text-2xl font-semibold leading-7 text-blue-600">
                     Our Vision
                   </p>
-                  <p className="mt-6 text-base leading-8 text-gray-700">
-                    Our goal is to become bona fide IT solutions experts who
-                    play a significant role in a fast-evolving environment.
+                  <p className="mt-6 text-lg leading-8 text-gray-700">
+                    To become the leading technology partner that transforms businesses through innovative software solutions, playing a pivotal role in shaping the digital future across industries.
+                  </p>
+                  <p className="mt-6 text-lg leading-8 text-gray-700">
+                    We envision a world where businesses leverage technology not just as a tool, but as a strategic advantage that drives growth, efficiency, and innovation.
                   </p>
                 </div>
               </div>
